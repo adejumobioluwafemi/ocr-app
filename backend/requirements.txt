@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pillow
+easyocr
+python-multipart
+opencv-python
+pydantic-settings
+python-dotenv
