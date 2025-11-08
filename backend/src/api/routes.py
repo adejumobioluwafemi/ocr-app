@@ -32,7 +32,7 @@ async def predict(image: UploadFile = File(...)) -> OCRResponse:
     - **image**: Image file (PNG, JPG, JPEG)
     """
     # Validate file type
-    if not validate_image_content_type(image.content_type):
+    if not validate_image_content_type(image.content_type): # type: ignore
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="File must be a supported image type (PNG, JPG, JPEG)"
